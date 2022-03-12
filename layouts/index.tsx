@@ -5,13 +5,14 @@ import { FC } from "react";
 
 interface MainLayoutProps extends SEOProps {
   isFooter?: boolean;
+  smallHeader?: boolean;
 }
 
-const MainLayout: FC<MainLayoutProps> = ({ children, isFooter, ...props }) => {
+const MainLayout: FC<MainLayoutProps> = ({ children, isFooter, smallHeader, ...props }) => {
   return (
     <>
       <SEO {...props} />
-      <Header />
+      <Header smallHeader={smallHeader}/>
       <main>{children}</main>
       {!isFooter && <Footer />}
     </>

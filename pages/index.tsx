@@ -9,12 +9,22 @@ import mailgo from "mailgo";
 import Contact from "../components/Contact";
 
 const subTitle = {
-  text: "Je suis Graphiste, webdesigner, tatooeur, illustratrice. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  text: "Je suis Graphiste, webdesigner, tatooeur, illustratrice... Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   emphasis: ["Graphiste", "webdesigner", "tatooeur", "illustratrice"],
 }
 
 const mailgoConfig = {
   dark: true,
+  actions: {
+    yahoo: false,
+    skype: false,
+    gmail: false,
+    outlook: false,
+    telegram: false,
+    whatsapp: false,
+    custom: false
+  },
+  showFooter: false,
 };
 
 
@@ -30,9 +40,9 @@ const Homepage: NextPage = () => {
   return (
     <MainLayout>
       <div className="bg-wave bg-repeat relative">
-        <VerticalNavigation animate={true} onClickDown={() => handleClick("who-i-am")}/>
         <section className="section flex justify-center items-center flex-col min-h-screen">
-          <img src="home-illustration.svg" alt="illustration logo"/>
+          <img src="home-illustration.svg" alt="illustration logo" className="mb-24 md:mb-0"/>
+          <VerticalNavigation animate={true} onClickDown={() => handleClick("who-i-am")}/>
         </section>
       </div>
       <div id="who-i-am" className="snap-start min-h-screen relative flex">

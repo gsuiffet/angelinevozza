@@ -8,7 +8,7 @@ interface Props {
 }
 
 const VerticalNavigation = ({animate= false, onClickUp, onClickDown}: Props) => {
-  return <div className="z-10 absolute h-screen flex flex-col justify-end md:justify-center right-0 left-0 md:left-auto items-center md:items-stretch -m-12 md:m-12 space-y-12">
+  return <div className="z-10 md:absolute md:h-screen flex flex-col justify-end md:justify-center right-0 left-0 md:left-auto items-center md:items-stretch md:m-12 space-y-12">
     {onClickUp && <div onClick={onClickUp} className={`h-8 w-8 bg-black rounded-full cursor-pointer ${animate ? "animate-bounce" : ""}`}>
       <ArrowUp className="w-8"/>
     </div>}

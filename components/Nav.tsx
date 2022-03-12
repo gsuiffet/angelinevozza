@@ -24,7 +24,7 @@ const Nav = () => {
           className="relative flex justify-center items-end"
         >
           <p className="text-black first-letter:capitalize">{entry}</p>
-          {pathname.endsWith(entry) && <Wave className="absolute -mb-2"/>}
+          {pathname.endsWith(entry) && <Wave className="absolute -mb-3 md:-mb-2"/>}
         </Link>
       ))}
       <Contact />
