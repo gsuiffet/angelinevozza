@@ -1,0 +1,35 @@
+@layer components {
+  .btn {
+    @apply shadow-xl shadow-black/25 px-4 h-[40px] font-semibold bg-black text-white rounded-full items-center inline-flex cursor-pointer hover:btn-active active:btn-active select-none;
+  }
+  .btn-active {
+    @apply bg-white text-black;
+  }
+  .section {
+    @apply w-full max-w-[1250px] mx-auto px-6 md:px-10 lg:px-6;
+  }
+  /*.section-content {*/
+  /*  @apply pt-12 md:pt-28;*/
+  /*}*/
+  .drop-down li {
+    @apply active:bg-black;
+  }
+  .drop-down li:active * {
+    @apply text-white;
+  }
+  .drop-down ul {
+    @apply p-0;
+  }
+  .parent:hover .parent-hover\:visible {
+    @apply visible;
+  }
+  .animated-card {
+    background: linear-gradient(to left, transparent, #000 50%) right;
+    background-size: 200%;
+    opacity: 95%;
+    transition: .5s ease-out;
+  }
+  .animated-card:hover {
+    background-position: left;
+  }
+}

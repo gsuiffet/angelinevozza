@@ -1,0 +1,38 @@
+import Head from "next/head";
+
+const CONFIG = {
+  title: "Angeline Vozza",
+  tagline: "Graphisme",
+  description: "Angeline Vozza Graphisme",
+  image: "/home-illustration.svg",
+};
+
+export interface SEOProps {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  ogTitle?: string;
+}
+
+const SEO = ({ title, description, image, noindex, ogTitle }: SEOProps) => {
+  const pageTitle = title ? `${CONFIG.title} | ${title}` : `${CONFIG.title} | ${CONFIG.tagline}`;
+  const pageDesc = description || CONFIG.description;
+
+  return (
+    <Head>
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDesc} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={ogTitle || pageTitle} />
+      <meta property="og:description" content={pageDesc} />
+      <meta property="og:site_name" content={CONFIG.title} />
+      <meta property="og:image" content={image || CONFIG.image} />
+      {noindex && <meta name="robots" content="noindex, follow" />}
+      {/*TODO need a ico file 16x16*/}
+      <link rel="shortcut icon" href="/logo.svg" />
+    </Head>
+  );
+};
+
+export default SEO;

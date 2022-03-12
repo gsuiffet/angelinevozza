@@ -1,82 +1,64 @@
-import Head from 'next/head'
+import React, {useEffect} from "react";
+import MainLayout from "layouts";
+import type { NextPage } from "next";
+import Emphasis from "components/Emphasis";
+import Link from "components/Link";
+import { scrollTo } from "../helpers/animateScroll";
+import VerticalNavigation from "../components/VerticalNavigation";
+import mailgo from "mailgo";
+import Contact from "../components/Contact";
 
-export default function Home() {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          <a className="text-blue-600" href="https://nextjs.org">
-            Angeline Vozza
-            {/*Next.js!*/}
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
-        </a>
-      </footer>
-    </div>
-  )
+const subTitle = {
+  text: "Je suis Graphiste, webdesigner, tatooeur, illustratrice. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  emphasis: ["Graphiste", "webdesigner", "tatooeur", "illustratrice"],
 }
+
+const mailgoConfig = {
+  dark: true,
+};
+
+
+const Homepage: NextPage = () => {
+  const handleClick = (scrollId: string) => {
+    scrollTo({ id: scrollId });
+  };
+
+  useEffect(() => {
+    mailgo(mailgoConfig);
+  }, []);
+
+  return (
+    <MainLayout>
+      <div className="bg-wave bg-repeat relative">
+        <VerticalNavigation animate={true} onClickDown={() => handleClick("who-i-am")}/>
+        <section className="section flex justify-center items-center flex-col min-h-screen">
+          <img src="home-illustration.svg" alt="illustration logo"/>
+        </section>
+      </div>
+      <div id="who-i-am" className="snap-start min-h-screen relative flex">
+        <div className="absolute md:relative min-h-screen w-full md:w-3/5 bg-angelineVozza bg-no-repeat bg-cover">
+          <div className="bg-red/[0.45] min-h-screen w-full pt-20 md:pt-44 pb-16"/>
+        </div>
+        <section className="absolute md:relative min-h-screen section flex w-full md:w-2/5 justify-end md:justify-center items-center flex-col pt-20 pb-16">
+          <div className="absolute mx-12">
+            <h1 className="text-white md:text-black">Qui suis je ?</h1>
+            <p className="max-w-md text-white md:text-black my-4">
+              <Emphasis title={subTitle} />
+            </p>
+            <Contact />
+          </div>
+        </section>
+      </div>
+      <section id="project-illustration" className="min-h-screen relative grid grid-cols-2">
+        <Link href="/projets" className="flex justify-center items-start pt-20 border-r border-grey cursor-pointer bg-no-repeat bg-projets bg-center">
+          <button className="btn">Projets</button>
+        </Link>
+        <Link href="/artwork" className="flex justify-center items-start pt-20 cursor-pointer bg-no-repeat bg-illustration bg-center">
+          <button className="btn">Artwork</button>
+        </Link>
+      </section>
+    </MainLayout>
+  );
+};
+
+export default Homepage;

@@ -1,0 +1,33 @@
+@layer base {
+  * {
+    @apply outline-none;
+  }
+  html,
+  body {
+    @apply text-sm md:text-regular text-black;
+  }
+
+  html {
+    @apply snap-proximity snap-y;
+  }
+
+  h1 {
+    @apply font-light text-h1-sm md:text-h1 text-center;
+  }
+
+  h2 {
+    @apply font-light font-black text-h3-sm md:text-h3 text-black mb-8 md:mb-10 lg:mb-8 text-center;
+  }
+
+  h3 {
+    @apply font-semibold text-h4-sm md:text-h4;
+  }
+
+  p em {
+    @apply text-white rounded-lg bg-blue px-2 whitespace-nowrap not-italic;
+  }
+
+  img {
+    @apply inline-block;
+  }
+}
