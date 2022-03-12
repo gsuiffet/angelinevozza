@@ -45,7 +45,7 @@ const Homepage: NextPage = () => {
           <VerticalNavigation animate={true} onClickDown={() => handleClick("who-i-am")}/>
         </section>
       </div>
-      <div id="who-i-am" className="snap-start min-h-screen relative flex">
+      <div id="who-i-am" className="min-h-screen relative flex">
         <div className="absolute md:relative min-h-screen w-full md:w-3/5 bg-angelineVozza bg-no-repeat bg-cover">
           <div className="bg-red/[0.45] min-h-screen w-full pt-20 md:pt-44 pb-16"/>
         </div>
