@@ -2,11 +2,11 @@ import React, {useEffect} from "react";
 import MainLayout from "layouts";
 import type { NextPage } from "next";
 import Emphasis from "components/Emphasis";
-import Link from "components/Link";
 import { scrollTo } from "../helpers/animateScroll";
 import VerticalNavigation from "../components/VerticalNavigation";
 import mailgo from "mailgo";
 import Contact from "../components/Contact";
+import RedirectCard from "../components/RedirectCard";
 
 const subTitle = {
   text: "Je suis Graphiste, webdesigner, tatooeur, illustratrice... Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -49,7 +49,7 @@ const Homepage: NextPage = () => {
         <div className="absolute md:relative min-h-screen w-full md:w-3/5 bg-angelineVozza bg-no-repeat bg-cover">
           <div className="bg-red/[0.45] min-h-screen w-full pt-20 md:pt-44 pb-16"/>
         </div>
-        <section className="absolute md:relative min-h-screen section flex w-full md:w-2/5 justify-end md:justify-center items-center flex-col pt-20 pb-16">
+        <section className="md:bg-wave md:bg-repeat absolute md:relative min-h-screen section flex w-full md:w-2/5 justify-end md:justify-center items-center flex-col pt-20 pb-16">
           <div className="absolute mx-12">
             <h1 className="text-white md:text-black">Qui suis je ?</h1>
             <p className="max-w-md text-white md:text-black my-4">
@@ -59,13 +59,13 @@ const Homepage: NextPage = () => {
           </div>
         </section>
       </div>
-      <section id="project-illustration" className="min-h-screen relative grid grid-cols-2">
-        <Link href="/projets" className="flex justify-center items-start pt-20 border-r border-grey cursor-pointer bg-no-repeat bg-projets bg-center">
-          <button className="btn">Projets</button>
-        </Link>
-        <Link href="/artwork" className="flex justify-center items-start pt-20 cursor-pointer bg-no-repeat bg-illustration bg-center">
-          <button className="btn">Artwork</button>
-        </Link>
+      <section id="project-illustration" className="grid grid-cols-2 py-20 bg-wave bg-repeat">
+        <div className="h-full w-full flex justify-center items-center">
+          <RedirectCard href="/projets" title="Mes projets" bg="bg-no-repeat bg-projets bg-contain bg-center"/>
+        </div>
+        <div className="h-full w-full flex justify-center items-center">
+          <RedirectCard href="/artwork" title="Mes Artwork" bg="bg-no-repeat bg-illustration bg-contain bg-center"/>
+        </div>
       </section>
     </MainLayout>
   );

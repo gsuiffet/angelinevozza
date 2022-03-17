@@ -80,7 +80,7 @@ const Artwork: NextPage = () => {
                     return <Card
                       key={index}
                       onClick={() => setSelectedCategory(category)}
-                      additionalContainerStyle="bg-cover"
+                      additionalContainerStyle="bg-cover bg-center"
                       additionalStyle="flex"
                       bg={illustrationStyle}
                       title={category}

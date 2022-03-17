@@ -11,6 +11,7 @@ module.exports = {
         blue: "#009FE3",
         transparent: "transparent",
         primary: "#",
+        white: "#fff",
       },
       backgroundImage: {
         wave: "url('/vertical-wave.svg')",
