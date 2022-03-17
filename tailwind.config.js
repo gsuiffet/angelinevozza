@@ -15,7 +15,7 @@ module.exports = {
       backgroundImage: {
         wave: "url('/vertical-wave.svg')",
         angelineVozza: "url('/angeline-vozza.jpg')",
-        illustration: "url('/illustrations/illustrations/amagritte 18x24.jpg')",
+        illustration: "url('/illustrations/illustrations/amagritte.jpg')",
         projets: "url('/shoko_project/logo-shoko.svg')",
       },
       boxShadow: {
