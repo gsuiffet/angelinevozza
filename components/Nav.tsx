@@ -23,7 +23,7 @@ const Nav = () => {
           href={`/${entry}`}
           className="relative flex justify-center items-end"
         >
-          <p className="text-black first-letter:capitalize">{entry}</p>
+          <p className="text-black font-black first-letter:capitalize">{entry}</p>
           {pathname.endsWith(entry) && <Wave className="absolute -mb-3 md:-mb-2"/>}
         </Link>
       ))}
