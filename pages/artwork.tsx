@@ -7,7 +7,8 @@ import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 import Chevron from "assets/chevron-down.svg";
 import React, {useState, useEffect, useCallback} from "react";
-import Carousel, { Modal, ModalGateway } from "react-images";
+import ImgsViewer from "react-images-viewer";
+
 import Card from "../components/Card";
 
 interface TypeIllustrationsByType {
@@ -25,11 +26,6 @@ const Artwork: NextPage = () => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
 
   useEffect(() => {
     if (!illustrationsByType) {
@@ -91,19 +87,25 @@ const Artwork: NextPage = () => {
             </div>
           </div>
         }
-        <ModalGateway>
-          {viewerIsOpen && illustrationsToDisplay ? (
-            <Modal onClose={closeLightbox}>
-              <Carousel
-                currentIndex={currentImage}
-                views={illustrationsToDisplay.map(x => ({source: x.src}))}
-              />
-            </Modal>
-          ) : null}
-        </ModalGateway>
+        {viewerIsOpen && illustrationsToDisplay && (
+          <ImgsViewer
+            imgs={illustrationsToDisplay.map(x => ({src: x.src}))}
+            currImg={currentImage}
+            isOpen={viewerIsOpen}
+            showThumbnails={true}
+            spinnerDisabled={true}
+            onClickThumbnail={(index: number) => {
+              setCurrentImage(index);
+            }}
+            backdropCloseable={true}
+            onClickPrev={() => setCurrentImage(currentImage - 1)}
+            onClickNext={() => setCurrentImage(currentImage + 1)}
+            onClose={() => setViewerIsOpen(false)}
+          />
+        )}
         {
           illustrationsToDisplay ?
-            <>
+            <div className="overflow-hidden">
               <div className="section my-4 flex flex-wrap mt-24">
                 <Menu onItemClick={handleMenuClick} menuButton={menuButton} transition className="drop-down">
                   {categories.map((category) => {
@@ -117,8 +119,8 @@ const Artwork: NextPage = () => {
                   })}
                 </Menu>
               </div>
-              <Gallery photos={illustrationsToDisplay} onClick={openLightbox} />
-            </>
+              <Gallery photos={illustrationsToDisplay} onClick={openLightbox} direction="column" />
+            </div>
           : null
         }
         <Footer />

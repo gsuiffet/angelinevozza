@@ -1,9 +1,10 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useCallback} from "react";
 import MainLayout from "layouts";
 import { NextPage } from "next";
 import Footer from "../layouts/footer";
 import Gallery from "react-photo-gallery";
 import Card from "../components/Card";
+import ImgsViewer from "react-images-viewer";
 
 interface Image {
   src: string,
@@ -133,7 +134,14 @@ const projects: IProject[] = [
 const Project: NextPage = () => {
   const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
   const topPage = useRef<HTMLDivElement | null>(null);
-  const ref = useRef<HTMLDivElement | null>(null)
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [currentImage, setCurrentImage] = useState<number>(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState<boolean>(false);
+
+  const openLightbox = useCallback((event, { index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
 
   function executeScroll() {
     ref.current?.scroll({top: 0})
@@ -180,9 +188,25 @@ const Project: NextPage = () => {
                 {selectedProject.images.length ?
                   <div className="my-6">
                     <h3>Autres design</h3>
-                    <Gallery photos={selectedProject.images} />
+                    <Gallery photos={selectedProject.images} onClick={openLightbox} direction="column" />
                   </div>
                 : null}
+                {viewerIsOpen && selectedProject.images.length && (
+                  <ImgsViewer
+                    imgs={selectedProject.images.map(x => ({src: x.src}))}
+                    currImg={currentImage}
+                    isOpen={viewerIsOpen}
+                    showThumbnails={true}
+                    spinnerDisabled={true}
+                    onClickThumbnail={(index: number) => {
+                      setCurrentImage(index);
+                    }}
+                    backdropCloseable={true}
+                    onClickPrev={() => setCurrentImage(currentImage - 1)}
+                    onClickNext={() => setCurrentImage(currentImage + 1)}
+                    onClose={() => setViewerIsOpen(false)}
+                  />
+                )}
               </div>
             </div>
           }
