@@ -17,7 +17,7 @@ const Footer = () => {
             <Instagram height={32} />
           </a>
         </div>
-        <div className="text-black text-tiny font-light">@ AV Créations Graphiques 2022</div>
+        <div className="text-black text-tiny">@ AV Créations Graphiques 2022</div>
       </div>
     </footer>
   );
