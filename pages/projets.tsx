@@ -19,43 +19,43 @@ interface IProject {
   logo: string,
   searchLogos: string[],
   contactCard: string[],
+  searchContactCard: string[],
   description: string,
-  flyer: string[],
   images: Image[]
 }
 
 const projects: IProject[] = [
   {
-    title: "Shoko",
+    title: "Visiter le Japon avec Shoko",
     isLogoRounded: true,
     previewProject: "shoko_project/logo-shoko.svg",
     logo: "shoko_project/logo-shoko.svg",
     searchLogos: ["shoko_project/logo-shoko2.svg", "shoko_project/logo-shoko1.svg"],
+    searchContactCard: [],
     contactCard: ["shoko_project/contact-card-shoko.svg", "shoko_project/contact-card-shoko1.svg"],
-    description: "Shoko voulait représenter son pays et sa culture. Elle organise des voyages.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    flyer: [],
+    description: "Shoko organise des voyages au Japon. Elle personnalise l’itinéraire et accompagne les voyageurs dans leurs visites. Elle m’a demandé de représenter un daruma, objet traditionnel du Japon, en rouge et blanc pour rappeler le drapeau japonais.",
     images: []
   },
   {
-    title: "Enjol",
+    title: "Enjol’Clim",
     isLogoRounded: false,
     previewProject: "enjol_project/logo-enjol.svg",
     logo: "enjol_project/logo-enjol.svg",
     searchLogos: [],
     contactCard: ["enjol_project/contact-card-enjol.svg"],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    flyer: [],
+    searchContactCard: [],
+    description: "Entreprise d’installation et de réparation de climatisations. Sa volonté est de mettre en avant le foyer, la maison ainsi que le chaud et le froid.",
     images: []
   },
   {
-    title: "FD",
+    title: "FD Coiffure",
     isLogoRounded: false,
     previewProject: "fd_project/img2.jpg",
     logo: "",
     searchLogos: [],
     contactCard: ["fd_project/contact-card-fd.svg", "fd_project/contact-card-fd1.svg"],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    flyer: ["fd_project/flyer"],
+    searchContactCard: [],
+    description: "Salon de coiffure à Palavas-les-flots. Le logo est déjà existant. Le salon a souhaité attirer une nouvelle clientèle, fidéliser et rendre le salon plus attractif et dynamique. J’ai réalisé des flyers, la carte de visite, ainsi que des supports de communication au sein du salon. L’image est sobre dans un style industriel et cocooning.",
     images: [
       {
         src: "/fd_project/flyer.svg",
@@ -90,7 +90,7 @@ const projects: IProject[] = [
     ]
   },
   {
-    title: "Jules verne",
+    title: "Cabinet dentaire Jules Verne",
     isLogoRounded: true,
     previewProject: "jules_verne_project/logo-jf.svg",
     logo: "jules_verne_project/logo-jf.svg",
@@ -99,8 +99,8 @@ const projects: IProject[] = [
       "jules_verne_project/logo recherche jules vernes2.svg"
     ],
     contactCard: [],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    flyer: [],
+    searchContactCard: [],
+    description: "Passionnés par Jules Verne, les dentistes de ce cabinet ont choisi le nautile comme symbole. Le logo doit être adaptable sur tout support.",
     images: [
       {
         src: "/jules_verne_project/1646669143316.jpg",
@@ -124,6 +124,69 @@ const projects: IProject[] = [
       },
       {
         src: "/jules_verne_project/1646674030640.jpg",
+        width: 1,
+        height: 1
+      },
+    ]
+  },
+  {
+    title: "Les Jardins de Saint-Sernin",
+    isLogoRounded: false,
+    previewProject: "st_sernin_garden/logo_final_saint_sernin.svg",
+    logo: "st_sernin_garden/logo_final_saint_sernin.svg",
+    searchLogos: [
+      "st_sernin_garden/logo_recherche_saint_sernin_1.svg",
+      "st_sernin_garden/logo_recherche_saint_sernin_2.svg"
+    ],
+    contactCard: [
+      "st_sernin_garden/carte_final_saint_sernin_recto.svg",
+      "st_sernin_garden/carte_final_saint_sernin_verso.svg"
+    ],
+    searchContactCard: [
+      "st_sernin_garden/carte_recherches_saint_sernin_1_recto.svg",
+      "st_sernin_garden/carte_recherches_saint_sernin_1_verso.svg",
+      "st_sernin_garden/carte_recherches_saint_sernin_2_recto.svg",
+      "st_sernin_garden/carte_recherches_saint_sernin_2_verso.svg"
+    ],
+    description: "Projet de fin d’étude, il n’a pas été réalisé. C’est une entreprise de production de fruits et légumes en agriculture raisonnée dans la région toulousaine. Ils proposent la cueillette de fruits et légumes dans les champs ainsi que la livraison de paniers hebdomadaires. Les valeurs mises en avant sont la consommation locale, saine, au fil des saisons, sans intermédiaire.",
+    images: [
+      {
+        src: "st_sernin_garden/flyer_saint_sernin_recto-min.jpg",
+        width: 1,
+        height: 1
+      },
+      {
+        src: "st_sernin_garden/flyer_saint_sernin_verso-min.jpg",
+        width: 1,
+        height: 1
+      },
+      {
+        src: "st_sernin_garden/camion_saint_sernin-min.jpg",
+        width: 1,
+        height: 1
+      },
+      {
+        src: "st_sernin_garden/devanture_saint_sernin-min.jpg",
+        width: 1,
+        height: 1
+      },
+      {
+        src: "st_sernin_garden/panneau_saint_sernin_2-min.jpg",
+        width: 1,
+        height: 1
+      },
+      {
+        src: "st_sernin_garden/panneau_saint_sernin_3-min.jpg",
+        width: 1,
+        height: 1
+      },
+      {
+        src: "st_sernin_garden/panneau_saint_sernin_4-min.jpg",
+        width: 1,
+        height: 1
+      },
+      {
+        src: "st_sernin_garden/panneaux_saint_sernin1-min.jpg",
         width: 1,
         height: 1
       },
@@ -167,7 +230,7 @@ const Project: NextPage = () => {
                   : null}
                   {selectedProject.searchLogos.length ?
                     <div className="my-6">
-                      <h3>Recherches</h3>
+                      <h3>Recherches Logo</h3>
                       <div className="flex flex-wrap">
                         {selectedProject.searchLogos.map((logo, index) => {
                           return <img src={logo} alt={logo} key={index} className={`w-32 m-4 shadow-lg ${selectedProject.isLogoRounded ? "rounded-full" : ""}`}/>
@@ -185,6 +248,16 @@ const Project: NextPage = () => {
                     </div>
                   </div>
                 : null}
+                {selectedProject.searchContactCard.length ?
+                  <div className="my-6">
+                    <h3>Recherches Carte de visite</h3>
+                    <div className="flex flex-wrap">
+                      {selectedProject.searchContactCard.map((logo, index) => {
+                        return <img src={logo} alt={logo} key={index} className="w-64 m-4 shadow-lg"/>
+                      })}
+                    </div>
+                  </div>
+                  : null}
                 {selectedProject.images.length ?
                   <div className="my-6">
                     <h3>Autres design</h3>
