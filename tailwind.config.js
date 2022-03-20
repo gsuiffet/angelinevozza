@@ -14,9 +14,9 @@ module.exports = {
         white: "#fff",
       },
       backgroundImage: {
-        wave: "url('/vertical-wave.svg')",
+        pattern: "url('/pattern.svg')",
         angelineVozza: "url('/angeline-vozza.jpg')",
-        illustration: "url('/illustrations/illustrations/amagritte.jpg')",
+        illustration: "url('/illustrations/tattoo/paon_print.jpg')",
         projets: "url('/shoko_project/logo-shoko.svg')",
       },
       boxShadow: {
