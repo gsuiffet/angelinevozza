@@ -66,7 +66,7 @@ const Artwork: NextPage = () => {
         {
           !selectedCategory &&
           <div className="relative -mt-16">
-            <h2 className={`${selectedCategory ? "mt-20" : "mt-44 md:mt-40"}`}>Mes Artworks</h2>
+            <h2 className={`${selectedCategory ? "mt-20" : "mt-44 md:mt-40"}`}>Artwork</h2>
             <div className={`${selectedCategory ? "md:mt-32" : ""} px-2 pb-2 md:overflow-y-auto md:absolute flex flex-wrap justify-center w-full`}>
               {
                 categories.map((category, index) => {
