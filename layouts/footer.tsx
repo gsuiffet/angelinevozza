@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-wave bg-repeat">
+    <footer className="bg-pattern bg-repeat">
       <div className="section flex space-x-5 items-center justify-between">
         <div className="flex space-x-5 my-4">
           <a href={LINKEDIN} target="_blank" rel="noreferrer">

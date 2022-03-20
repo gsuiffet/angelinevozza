@@ -19,7 +19,7 @@ const Drawer: FC<DrawerProps> = ({ open, onClose, children }) => {
         open ? "translate-x-0" : "translate-x-80"
       }`}>
         <div
-          className="bg-wave bg-repeat h-full"
+          className="bg-pattern bg-repeat h-full"
         >
           <div className="p-8 absolute top-0 right-0">
             <div className="flex justify-center items-center w-[40px] h-[20px]">

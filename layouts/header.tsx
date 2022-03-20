@@ -20,7 +20,7 @@ const Header = ({smallHeader = false}: {smallHeader?: boolean}) => {
 
   return (
     <header className="fixed z-[150] inset-x-0 transition-all duration-200 bg-white">
-      <div className={`bg-wave bg-repeat h-full ${smallHeader ? "py-4 md:py-2" : headerClassName}`}>
+      <div className={`bg-pattern bg-repeat h-full ${smallHeader ? "py-4 md:py-2" : headerClassName}`}>
         <div className="section flex justify-between snap-align-none items-center">
           <Link href="/">
             <img className="w-10" src="/logo.svg" alt="Logo" />
