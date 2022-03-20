@@ -39,7 +39,7 @@ const projects: IProject[] = [
   {
     title: "Enjol’Clim",
     isLogoRounded: false,
-    previewProject: "enjol_project/logo-enjol.svg",
+    previewProject: "enjol_project/vignette_enjolclim.svg",
     logo: "enjol_project/logo-enjol.svg",
     searchLogos: [],
     contactCard: ["enjol_project/contact-card-enjol.svg"],
@@ -50,7 +50,7 @@ const projects: IProject[] = [
   {
     title: "FD Coiffure",
     isLogoRounded: false,
-    previewProject: "fd_project/img2.jpg",
+    previewProject: "fd_project/vignette_fd_coiffure.svg",
     logo: "",
     searchLogos: [],
     contactCard: ["fd_project/contact-card-fd.svg", "fd_project/contact-card-fd1.svg"],
@@ -132,7 +132,7 @@ const projects: IProject[] = [
   {
     title: "Les Jardins de Saint-Sernin",
     isLogoRounded: false,
-    previewProject: "st_sernin_garden/logo_final_saint_sernin.svg",
+    previewProject: "st_sernin_garden/vignette_jardin_st_sernin.svg",
     logo: "st_sernin_garden/logo_final_saint_sernin.svg",
     searchLogos: [
       "st_sernin_garden/logo_recherche_saint_sernin_1.svg",
