@@ -2,8 +2,8 @@ import Head from "next/head";
 
 const CONFIG = {
   title: "Angeline Vozza",
-  tagline: "Graphisme",
-  description: "Angeline Vozza Graphisme",
+  tagline: "Créations Graphiques",
+  description: "Angeline Créations Graphiques",
   image: "/home-illustration.svg",
 };
 
