@@ -16,7 +16,7 @@ module.exports = {
       backgroundImage: {
         pattern: "url('/pattern.svg')",
         angelineVozza: "url('/angeline-vozza.jpg')",
-        illustration: "url('/illustration/tattoo/paon_print.jpg')",
+        illustration: "url('/illustrations/tattoo/paon_print.jpg')",
         projets: "url('/shoko_project/logo-shoko.svg')",
       },
       boxShadow: {
