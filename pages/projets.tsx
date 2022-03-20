@@ -32,7 +32,7 @@ const projects: IProject[] = [
     logo: "shoko_project/logo-shoko.svg",
     searchLogos: ["shoko_project/logo-shoko2.svg", "shoko_project/logo-shoko1.svg"],
     searchContactCard: [],
-    contactCard: ["shoko_project/contact-card-shoko.svg", "shoko_project/contact-card-shoko1.svg"],
+    contactCard: ["shoko_project/contact-card-shoko1.svg", "shoko_project/contact-card-shoko.svg"],
     description: "Shoko organise des voyages au Japon. Elle personnalise l’itinéraire et accompagne les voyageurs dans leurs visites. Elle m’a demandé de représenter un daruma, objet traditionnel du Japon, en rouge et blanc pour rappeler le drapeau japonais.",
     images: []
   },
@@ -222,7 +222,7 @@ const Project: NextPage = () => {
                 <p className="my-4">{selectedProject.description}</p>
                   {selectedProject.logo ?
                     <div className="my-6">
-                      <h3>Logo</h3>
+                      <h3>Logo sélectionné</h3>
                       <div className="flex flex-wrap">
                         <img src={selectedProject.logo} alt={selectedProject.logo} className={`w-32 m-4 shadow-lg ${selectedProject.isLogoRounded ? "rounded-full" : ""}`}/>
                       </div>
@@ -260,7 +260,7 @@ const Project: NextPage = () => {
                   : null}
                 {selectedProject.images.length ?
                   <div className="my-6">
-                    <h3>Autres design</h3>
+                    <h3>Supports de communication</h3>
                     <Gallery photos={selectedProject.images} onClick={openLightbox} direction="column" />
                   </div>
                 : null}
@@ -284,7 +284,7 @@ const Project: NextPage = () => {
             </div>
           }
           <div className="relative md:border-l md:border-grey md:min-h-screen -mt-16 md:overflow-y-auto">
-            <h2 className={`${selectedProject ? "mt-20 md:hidden" : "mt-44 md:mt-40"}`}>Mes Projets</h2>
+            <h2 className={`${selectedProject ? "mt-20 md:hidden" : "mt-44 md:mt-40"}`}>Projets</h2>
             <div className={`${selectedProject ? "md:mt-32" : ""} px-2 pb-2 md:overflow-y-auto md:absolute flex flex-wrap justify-center w-full`}>
               {projects.map(({title, previewProject}, index) => {
                 const projectToDisplay = projects.find(({title: projectTitle}) => projectTitle === title);
