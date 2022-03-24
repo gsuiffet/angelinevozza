@@ -23,6 +23,8 @@ const mailgoConfig = {
 
 
 const Homepage: NextPage = () => {
+  const style = { backgroundImage: `url("https://images.prismic.io/angelinevozza/d89d797a-f297-43f8-ac3f-ccb9ea0c6e67_photomoi.jpg?auto=compress,format")` };
+
   const handleClick = (scrollId: string) => {
     scrollTo({ id: scrollId });
   };
@@ -40,7 +42,7 @@ const Homepage: NextPage = () => {
         </section>
       </div>
       <div id="who-i-am" className="min-h-screen relative flex">
-        <div className="absolute md:relative min-h-screen w-full md:w-3/5 bg-angelineVozza bg-no-repeat bg-cover">
+        <div className="absolute md:relative min-h-screen w-full md:w-3/5 bg-no-repeat bg-cover" style={style}>
           <div className="bg-red/[0.45] min-h-screen w-full pt-20 md:pt-44 pb-16"/>
         </div>
         <section className="md:bg-pattern md:bg-repeat absolute md:relative min-h-screen section flex w-full md:w-2/5 justify-end md:justify-center items-center flex-col pt-20 pb-16">
