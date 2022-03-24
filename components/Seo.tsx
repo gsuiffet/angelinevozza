@@ -3,7 +3,7 @@ import Head from "next/head";
 const CONFIG = {
   title: "Angeline Vozza",
   tagline: "Créations Graphiques",
-  description: "Angeline Créations Graphiques",
+  description: "Créations Graphiques",
   image: "/home-illustration.svg",
 };
 
