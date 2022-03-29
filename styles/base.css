@@ -1,6 +1,7 @@
 @layer base {
   * {
     @apply outline-none;
+    @apply font-sans;
   }
   html,
   body {
@@ -29,9 +30,5 @@
 
   img {
     @apply inline-block;
-  }
-
-  .react-photo-gallery--gallery div img, video {
-    @apply box-content border-[1px] border-white;
   }
 }
