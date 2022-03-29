@@ -32,4 +32,7 @@
   .animated-card:hover {
     background-position: left;
   }
+  .react-photo-gallery--gallery div img, video {
+    @apply box-content border-[1px] border-white;
+  }
 }
