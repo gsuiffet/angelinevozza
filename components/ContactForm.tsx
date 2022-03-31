@@ -56,7 +56,7 @@ const ContactForm = () => {
   }
 
   if (isSubmitSuccessful) {
-    return <p className="font-medium">Bien reçu ! À bienôt 😀 Merci</p>
+    return <p className="font-medium">Bien reçu ! À bientôt 😀 Merci</p>
   }
 
   return <FormProvider {...form}>
