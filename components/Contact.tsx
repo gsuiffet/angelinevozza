@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "./Link";
 
 const Contact = () => {
-  return <a href="mailto:angelinevozza@gmail.com">
-      <button className="btn w-fit">Contactez moi</button>
-    </a>
+  return <Link href="/contact">
+    <button className="btn w-fit">Contactez moi</button>
+  </Link>
 }
 
 export default Contact;
