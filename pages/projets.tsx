@@ -14,7 +14,6 @@ interface Image {
 
 interface IProject {
   title: string,
-  isLogoRounded: boolean,
   previewProject: string,
   logo: string,
   searchLogos: string[],
@@ -27,7 +26,6 @@ interface IProject {
 const projects: IProject[] = [
   {
     title: "Visiter le Japon avec Shoko",
-    isLogoRounded: true,
     previewProject: "shoko_project/logo-shoko.svg",
     logo: "shoko_project/logo-shoko.svg",
     searchLogos: ["shoko_project/logo-shoko2.svg", "shoko_project/logo-shoko1.svg"],
@@ -37,8 +35,22 @@ const projects: IProject[] = [
     images: []
   },
   {
+    title: "Label Ecriture",
+    previewProject: "label_ecriture_project/vignette_label_ecriture.svg",
+    logo: "label_ecriture_project/logo_final.svg",
+    searchLogos: [
+      "label_ecriture_project/recherche_logo_1.svg",
+      "label_ecriture_project/recherche_logo_2.svg",
+      "label_ecriture_project/recherche_logo_3.svg",
+      "label_ecriture_project/recherche_logo_4.svg",
+    ],
+    searchContactCard: [],
+    contactCard: ["label_ecriture_project/carte_label_ecriture_recto.svg", "label_ecriture_project/carte_label_ecriture_verso.svg"],
+    description: "Blandine crée sa société afin de proposer des cours d'orthographe puis des cours d'écriture. Elle s'adresse aux entreprises et professionnels voulant perfectionner leur français.  Son logo doit être dynamique et ludique. C'est une puriste de la langue française c'est pourquoi j'ai choisi la calligraphie mélangée à une typographie classique pour le côté instructif. Les couleurs de lever de soleil rappelle l'évolution des connaissances.",
+    images: []
+  },
+  {
     title: "Enjol’Clim",
-    isLogoRounded: false,
     previewProject: "enjol_project/vignette_enjolclim.svg",
     logo: "enjol_project/logo-enjol.svg",
     searchLogos: [],
@@ -49,7 +61,6 @@ const projects: IProject[] = [
   },
   {
     title: "FD Coiffure",
-    isLogoRounded: false,
     previewProject: "fd_project/vignette_fd_coiffure.svg",
     logo: "",
     searchLogos: [],
@@ -91,7 +102,6 @@ const projects: IProject[] = [
   },
   {
     title: "Cabinet dentaire Jules Verne",
-    isLogoRounded: true,
     previewProject: "jules_verne_project/logo-jf.svg",
     logo: "jules_verne_project/logo-jf.svg",
     searchLogos: [
@@ -131,7 +141,6 @@ const projects: IProject[] = [
   },
   {
     title: "Les Jardins de Saint-Sernin",
-    isLogoRounded: false,
     previewProject: "st_sernin_garden/vignette_jardin_st_sernin.svg",
     logo: "st_sernin_garden/logo_final_saint_sernin.svg",
     searchLogos: [
@@ -224,7 +233,7 @@ const Project: NextPage = () => {
                     <div className="my-6">
                       <h3>Logo sélectionné</h3>
                       <div className="flex flex-wrap">
-                        <img src={selectedProject.logo} alt={selectedProject.logo} className={`w-32 m-4 shadow-lg ${selectedProject.isLogoRounded ? "rounded-full" : ""}`}/>
+                        <img src={selectedProject.logo} alt={selectedProject.logo} className="w-32 m-4"/>
                       </div>
                     </div>
                   : null}
@@ -233,7 +242,7 @@ const Project: NextPage = () => {
                       <h3>Recherches Logo</h3>
                       <div className="flex flex-wrap">
                         {selectedProject.searchLogos.map((logo, index) => {
-                          return <img src={logo} alt={logo} key={index} className={`w-32 m-4 shadow-lg ${selectedProject.isLogoRounded ? "rounded-full" : ""}`}/>
+                          return <img src={logo} alt={logo} key={index} className="w-32 m-4"/>
                         })}
                       </div>
                     </div>
