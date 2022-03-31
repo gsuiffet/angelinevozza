@@ -1,26 +1,10 @@
-import React, {useEffect} from "react";
+import React from "react";
 import MainLayout from "layouts";
 import type { NextPage } from "next";
 import { scrollTo } from "../helpers/animateScroll";
 import VerticalNavigation from "../components/VerticalNavigation";
-import mailgo from "mailgo";
 import Contact from "../components/Contact";
 import RedirectCard from "../components/RedirectCard";
-
-const mailgoConfig = {
-  dark: true,
-  actions: {
-    yahoo: false,
-    skype: false,
-    gmail: false,
-    outlook: false,
-    telegram: false,
-    whatsapp: false,
-    custom: false
-  },
-  showFooter: false,
-};
-
 
 const Homepage: NextPage = () => {
   const style = { backgroundImage: `url("https://images.prismic.io/angelinevozza/d89d797a-f297-43f8-ac3f-ccb9ea0c6e67_photomoi.jpg?auto=compress,format")` };
@@ -28,10 +12,6 @@ const Homepage: NextPage = () => {
   const handleClick = (scrollId: string) => {
     scrollTo({ id: scrollId });
   };
-
-  useEffect(() => {
-    mailgo(mailgoConfig);
-  }, []);
 
   return (
     <MainLayout>

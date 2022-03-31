@@ -1,7 +1,10 @@
+import "react-toastify/dist/ReactToastify.css";
+
 import SEO, { SEOProps } from "components/Seo";
 import Footer from "layouts/footer";
 import Header from "layouts/header";
 import { FC } from "react";
+import { ToastContainer } from "react-toastify";
 
 interface MainLayoutProps extends SEOProps {
   isFooter?: boolean;
@@ -14,6 +17,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children, isFooter, smallHeader, ...p
       <SEO {...props} />
       <Header smallHeader={smallHeader}/>
       <main>{children}</main>
+      <ToastContainer position="bottom-right" />
       {!isFooter && <Footer />}
     </>
   );
