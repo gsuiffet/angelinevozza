@@ -32,9 +32,9 @@ const projects: IProject[] = [
     searchContactCard: [
       "nomade_project/cdv_recherche1_recto_nomadesens.svg",
       "nomade_project/cdv_recherche1_verso_nomadesens.svg",
-      "nomade_project/cdv_recherche1_2_nomadesens.svg",
       "nomade_project/cdv_recherche2_recto_nomadesens.svg",
       "nomade_project/cdv_recherche2_verso_nomadesens.svg",
+      "nomade_project/cdv_recherche1_2_nomadesens.svg",
       "nomade_project/cdv_recherche2_2_nomadesens.svg",
     ],
     contactCard: ["nomade_project/cdv_finale_recto_nomadesens.svg", "nomade_project/cdv_finale_verso_nomadesens.svg"],
