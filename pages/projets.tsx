@@ -25,6 +25,23 @@ interface IProject {
 
 const projects: IProject[] = [
   {
+    title: "NomadeSens",
+    previewProject: "nomade_project/vignette_nomadesens.svg",
+    logo: "",
+    searchLogos: [],
+    searchContactCard: [
+      "nomade_project/cdv_recherche1_recto_nomadesens.svg",
+      "nomade_project/cdv_recherche1_verso_nomadesens.svg",
+      "nomade_project/cdv_recherche1_2_nomadesens.svg",
+      "nomade_project/cdv_recherche2_recto_nomadesens.svg",
+      "nomade_project/cdv_recherche2_verso_nomadesens.svg",
+      "nomade_project/cdv_recherche2_2_nomadesens.svg",
+    ],
+    contactCard: ["nomade_project/cdv_finale_recto_nomadesens.svg", "nomade_project/cdv_finale_verso_nomadesens.svg"],
+    description: "Laëtitia propose des soins de naturopathie et de magnétisme, elle accompagne ses clients pour améliorer leur bien-être. Elle me demande de réaliser ses cartes de visite. Son logo est déjà existant, elle souhaite des cartes dynamiques, à son image. Je choisis un lotus dessiné à la main, symbole zen et féminité. J’ajoute un paysage crépusculaire assorti de couleurs apaisantes.",
+    images: []
+  },
+  {
     title: "Visiter le Japon avec Shoko",
     previewProject: "shoko_project/logo-shoko.svg",
     logo: "shoko_project/logo-shoko.svg",
@@ -46,7 +63,7 @@ const projects: IProject[] = [
     ],
     searchContactCard: [],
     contactCard: ["label_ecriture_project/carte_label_ecriture_recto.svg", "label_ecriture_project/carte_label_ecriture_verso.svg"],
-    description: "Blandine crée sa société afin de proposer des cours d'orthographe puis des cours d'écriture. Elle s'adresse aux entreprises et professionnels voulant perfectionner leur français.  Son logo doit être dynamique et ludique. C'est une puriste de la langue française c'est pourquoi j'ai choisi la calligraphie mélangée à une typographie classique pour le côté instructif. Les couleurs de lever de soleil rappelle l'évolution des connaissances.",
+    description: "Blandine crée sa société afin de proposer des cours d'orthographe puis des cours d'écriture. Elle s'adresse aux entreprises et professionnels voulant perfectionner leur français.  Son logo doit être dynamique et ludique. C'est une puriste de la langue française c'est pourquoi j'ai choisi la calligraphie mélangée à une typographie classique pour le côté instructif. Les couleurs de lever de soleil rappellent l'évolution des connaissances.",
     images: []
   },
   {
@@ -252,7 +269,7 @@ const Project: NextPage = () => {
                     <h3>Carte de visite</h3>
                     <div className="flex flex-wrap">
                       {selectedProject.contactCard.map((logo, index) => {
-                        return <img src={logo} alt={logo} key={index} className="w-64 m-4 shadow-lg"/>
+                        return <img src={logo} alt={logo} key={index} className="h-fit w-64 m-4 shadow-lg"/>
                       })}
                     </div>
                   </div>
@@ -262,7 +279,7 @@ const Project: NextPage = () => {
                     <h3>Recherches Carte de visite</h3>
                     <div className="flex flex-wrap">
                       {selectedProject.searchContactCard.map((logo, index) => {
-                        return <img src={logo} alt={logo} key={index} className="w-64 m-4 shadow-lg"/>
+                        return <img src={logo} alt={logo} key={index} className="h-fit w-64 m-4 shadow-lg"/>
                       })}
                     </div>
                   </div>
