@@ -6,9 +6,9 @@ module.exports = {
         "screen+1": "calc(100vh + 1px)",
       },
       colors: {
-        yellow: "#FFEC00",
-        red: "#E6007E",
-        blue: "#009FE3",
+        yellow: "#FFED00",
+        red: "#E5007D",
+        blue: "#009EE3",
         transparent: "transparent",
         primary: "#",
         white: "#fff",

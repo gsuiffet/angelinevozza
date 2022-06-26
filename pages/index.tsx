@@ -23,7 +23,7 @@ const Homepage: NextPage = () => {
       </div>
       <div id="who-i-am" className="min-h-screen relative flex">
         <div className="absolute md:relative min-h-screen w-full md:w-3/5 bg-no-repeat bg-cover" style={style}>
-          <div className="bg-red/[0.45] min-h-screen w-full pt-20 md:pt-44 pb-16"/>
+          <div className="bg-red/[0.20] min-h-screen w-full pt-20 md:pt-44 pb-16"/>
         </div>
         <section className="md:bg-pattern md:bg-repeat absolute md:relative min-h-screen section flex w-full md:w-2/5 justify-end md:justify-center items-center flex-col pt-20 pb-16">
           <div className="absolute mx-6 lg:mx-12">
@@ -37,7 +37,8 @@ const Homepage: NextPage = () => {
               Attirée par les arts sous toutes ses formes, mes inspirations sont diversifiées.
             </p>
             <p className="mb-4 flex w-full justify-center">
-              <em className="whitespace-normal text-center">Je personnalise vos projets à votre image.</em>
+              <p className="whitespace-normal text-center font-bold">Je personnalise vos projets à votre image.</p>
+              {/*<em className="whitespace-normal text-center">Je personnalise vos projets à votre image.</em>*/}
             </p>
             <Contact />
           </div>

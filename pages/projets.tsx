@@ -47,7 +47,13 @@ const projects: IProject[] = [
     logo: "shoko_project/logo-shoko.svg",
     searchLogos: ["shoko_project/logo-shoko2.svg", "shoko_project/logo-shoko1.svg"],
     searchContactCard: [],
-    contactCard: ["shoko_project/contact-card-shoko1.svg", "shoko_project/contact-card-shoko.svg", "shoko_project/mise_en_situ_carte_shoko.jpg"],
+    contactCard: [
+      "shoko_project/contact-card-shoko1.svg",
+      "shoko_project/contact-card-shoko.svg",
+      "shoko_project/shoko_grande_carte_recto_compressed.jpg",
+      "shoko_project/shoko_grande_carte_verso_compressed.jpg",
+      "shoko_project/mise_en_situ_carte_shoko.jpg",
+    ],
     description: "Shoko organise des voyages au Japon. Elle personnalise l’itinéraire et accompagne les voyageurs dans leurs visites. Elle m’a demandé de représenter un daruma, objet traditionnel du Japon, en rouge et blanc pour rappeler le drapeau japonais.",
     images: []
   },
