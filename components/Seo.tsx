@@ -1,9 +1,9 @@
 import Head from "next/head";
 
 const CONFIG = {
-  title: "Angeline Vozza",
-  tagline: "Créations Graphiques",
-  description: "Créations Graphiques",
+  title: "Angeline Vozza (angeline_illustrations)",
+  tagline: "Présentation",
+  description: "Angeline illustrations, réalisation de logo, carte de visite, flyer, et tout support de communication pour votre entreprise",
   image: "/home-illustration.svg",
 };
 

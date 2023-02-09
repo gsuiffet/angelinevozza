@@ -32,13 +32,13 @@ const Homepage: NextPage = () => {
               Passionnée de dessin depuis l’enfance, je m’oriente naturellement vers les arts graphiques durant mes études. Je me tourne ensuite vers l’artisanat. Riche de dix années d’expérience, je décide de vivre à plein temps ma passion.
             </p>
             <p className="max-w-md text-white md:text-black my-4">
-              Je réalise logo, carte de visite, flyer, et tout support de communication pour votre entreprise.            </p>
+              Je réalise logo, carte de visite, flyer, et tout support de communication pour votre entreprise.
+            </p>
             <p className="max-w-md text-white md:text-black my-4">
               Attirée par les arts sous toutes ses formes, mes inspirations sont diversifiées.
             </p>
-            <p className="mb-4 flex w-full justify-center">
-              <p className="whitespace-normal text-center font-bold">Je personnalise vos projets à votre image.</p>
-              {/*<em className="whitespace-normal text-center">Je personnalise vos projets à votre image.</em>*/}
+            <p className="mb-4 flex w-full justify-center whitespace-normal text-center font-bold">
+              Je personnalise vos projets à votre image.
             </p>
             <Contact />
           </div>

@@ -61,7 +61,10 @@ const Artwork: NextPage = () => {
   );
 
   return (
-    <MainLayout isFooter={true}>
+    <MainLayout isFooter={true}
+      title="Artwork"
+      description="Présentation de mes dessins personnels"
+    >
       <div className="flex flex-col justify-between min-h-screen">
         {
           !selectedCategory &&

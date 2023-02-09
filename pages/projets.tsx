@@ -243,7 +243,12 @@ const Project: NextPage = () => {
     topPage?.current?.scrollIntoView();
   }
   return (
-    <MainLayout isFooter={true} smallHeader={!!selectedProject}>
+    <MainLayout
+      isFooter={true}
+      smallHeader={!!selectedProject}
+      title="Réalisations clients"
+      description="Présentation de différents projets professionnels"
+>
       <div ref={topPage} className="flex flex-col justify-between min-h-screen">
         <div className={`${selectedProject ? "md:grid md:grid-cols-3" : ""}`}>
           {
