@@ -28,6 +28,7 @@ const SEO = ({ title, description, image, noindex, ogTitle }: SEOProps) => {
       <meta property="og:description" content={pageDesc} />
       <meta property="og:site_name" content={CONFIG.title} />
       <meta property="og:image" content={image || CONFIG.image} />
+      <meta name="google-site-verification" content="RsAI-1cwsyvvP9tQsPL2xIFspAtXzNuNFxJcNMeMugw" />
       {noindex && <meta name="robots" content="noindex, follow" />}
     </Head>
   );
